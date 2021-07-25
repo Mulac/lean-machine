@@ -1,4 +1,4 @@
-package pipe
+package data
 
 type Pipeline interface {
 	Execute()
