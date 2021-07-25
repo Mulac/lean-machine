@@ -1,10 +1,5 @@
 package data
 
-type Envelope interface {
-	GetState() State
-	GetMetadata() map[string]interface{}
-}
-
 type State string
 
 const (
@@ -13,3 +8,8 @@ const (
 	STATE_FINISHED   State = "finished"
 	STATE_ERROR      State = "error"
 )
+
+type Envelope interface {
+	GetState() State
+	GetMetadata() map[string]interface{}
+}

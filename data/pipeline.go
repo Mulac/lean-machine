@@ -4,7 +4,12 @@ type Pipeline interface {
 	Execute()
 }
 
-type Processor interface {
-	GetName() string
-	Process(m Message) Message
+type PipelineBuilder struct{}
+
+func (pb *PipelineBuilder) FromJSON() PipelineBuilder {
+	return *pb
+}
+
+func (pb *PipelineBuilder) Build() (Pipeline, error) {
+	return nil, nil
 }
